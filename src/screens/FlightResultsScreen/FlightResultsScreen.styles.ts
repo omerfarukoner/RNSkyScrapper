@@ -1,0 +1,325 @@
+import { StyleSheet } from 'react-native';
+import { colors, typography, spacing, radius } from '../../theme';
+
+export default StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: colors.background.secondary,
+  },
+  loadingContainer: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: colors.background.secondary,
+  },
+  loadingText: {
+    ...typography.body,
+    color: colors.text.primary,
+    marginTop: spacing.lg,
+  },
+  loadingSpinner: {
+    ...typography.h1,
+    color: colors.primary,
+  },
+  header: {
+    backgroundColor: colors.background.primary,
+    paddingHorizontal: spacing.xl,
+    paddingVertical: spacing.lg,
+    borderBottomLeftRadius: 16,
+    borderBottomRightRadius: 16,
+    shadowColor: colors.shadow.light,
+    shadowOffset: {
+      width: 0,
+      height: 2,
+    },
+    shadowOpacity: 1,
+    shadowRadius: 4,
+    elevation: 4,
+  },
+  resultsCount: {
+    ...typography.h2,
+    color: colors.text.primary,
+  },
+  route: {
+    ...typography.bodySmall,
+    color: colors.text.secondary,
+    marginTop: spacing.xs,
+  },
+  filterContainer: {
+    flexDirection: 'row',
+    paddingHorizontal: spacing.xl,
+    paddingVertical: spacing.md,
+    gap: spacing.md,
+  },
+  filterButton: {
+    backgroundColor: colors.background.card,
+    borderRadius: radius.lg,
+    paddingHorizontal: spacing.md,
+    paddingVertical: spacing.sm,
+    borderWidth: 1,
+    borderColor: colors.border.light,
+  },
+  filterButtonActive: {
+    backgroundColor: colors.primary,
+    borderColor: colors.primary,
+    shadowColor: colors.primary,
+    shadowOffset: {
+      width: 0,
+      height: 2,
+    },
+    shadowOpacity: 0.3,
+    shadowRadius: 4,
+    elevation: 4,
+  },
+  filterButtonText: {
+    ...typography.captionMedium,
+    color: colors.text.secondary,
+  },
+  filterButtonTextActive: {
+    ...typography.captionMedium,
+    color: colors.text.white,
+  },
+  listContainer: {
+    paddingHorizontal: spacing.xl,
+    paddingVertical: spacing.md,
+  },
+  flightCard: {
+    backgroundColor: colors.background.card,
+    borderRadius: radius.lg,
+    padding: spacing.lg,
+    marginBottom: spacing.lg,
+    shadowColor: colors.shadow.light,
+    shadowOffset: {
+      width: 0,
+      height: 4,
+    },
+    shadowOpacity: 1,
+    shadowRadius: 12,
+    elevation: 6,
+    borderWidth: 1,
+    borderColor: colors.border.light,
+  },
+  flightCardPressed: {
+    transform: [{ scale: 0.98 }],
+    shadowOpacity: 0.5,
+  },
+  flightHeader: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'flex-start',
+    marginBottom: spacing.lg,
+  },
+  airlineInfo: {
+    flex: 1,
+  },
+  airlineContainer: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    marginBottom: spacing.xs,
+  },
+  airlineLogo: {
+    width: 24,
+    height: 24,
+    backgroundColor: colors.flight.airline,
+    borderRadius: radius.md,
+    marginRight: spacing.sm,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  airlineLogoText: {
+    ...typography.captionMedium,
+    color: colors.text.white,
+    fontSize: 10,
+  },
+  airlineName: {
+    ...typography.bodySemiBold,
+    color: colors.text.primary,
+  },
+  flightNumber: {
+    ...typography.caption,
+    color: colors.text.secondary,
+    marginTop: spacing.xs,
+  },
+  priceContainer: {
+    alignItems: 'flex-end',
+  },
+  price: {
+    ...typography.h3,
+    color: colors.flight.price,
+    fontWeight: '800',
+  },
+  priceLabel: {
+    ...typography.caption,
+    color: colors.text.secondary,
+    marginTop: 2,
+  },
+  tagContainer: {
+    flexDirection: 'row',
+    marginTop: spacing.sm,
+    gap: spacing.xs,
+  },
+  tag: {
+    backgroundColor: colors.status.success,
+    borderRadius: radius.md,
+    paddingHorizontal: spacing.sm,
+    paddingVertical: 2,
+  },
+  tagText: {
+    ...typography.caption,
+    color: colors.text.white,
+    fontSize: 10,
+    fontWeight: '600',
+  },
+  flightRoute: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+    paddingVertical: spacing.md,
+  },
+  routePoint: {
+    alignItems: 'center',
+    flex: 1,
+  },
+  time: {
+    ...typography.h4,
+    color: colors.text.primary,
+    fontWeight: '700',
+  },
+  airport: {
+    ...typography.captionMedium,
+    color: colors.text.secondary,
+    marginTop: spacing.xs,
+    letterSpacing: 1,
+  },
+  city: {
+    ...typography.caption,
+    color: colors.text.tertiary,
+    marginTop: 2,
+  },
+  flightLine: {
+    flex: 2,
+    alignItems: 'center',
+    justifyContent: 'center',
+    paddingHorizontal: spacing.lg,
+    position: 'relative',
+  },
+  flightPath: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    width: '100%',
+  },
+  line: {
+    height: 2,
+    backgroundColor: colors.border.medium,
+    flex: 1,
+  },
+  planeIcon: {
+    position: 'absolute',
+    top: -8,
+    left: '50%',
+    transform: [{ translateX: -8 }],
+    width: 16,
+    height: 16,
+    backgroundColor: colors.primary,
+    borderRadius: 8,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  planeIconText: {
+    ...typography.caption,
+    color: colors.text.white,
+    fontSize: 8,
+  },
+  durationContainer: {
+    alignItems: 'center',
+    backgroundColor: colors.background.tertiary,
+    borderRadius: radius.md,
+    paddingHorizontal: spacing.sm,
+    paddingVertical: spacing.xs,
+    marginTop: spacing.md,
+  },
+  duration: {
+    ...typography.captionMedium,
+    color: colors.text.primary,
+  },
+  stopsContainer: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    marginTop: spacing.xs,
+  },
+  stopsIndicator: {
+    width: 6,
+    height: 6,
+    borderRadius: 3,
+    marginHorizontal: 2,
+  },
+  directFlight: {
+    backgroundColor: colors.flight.direct,
+  },
+  oneStop: {
+    backgroundColor: colors.flight.oneStop,
+  },
+  multiStop: {
+    backgroundColor: colors.flight.multiStop,
+  },
+  stops: {
+    ...typography.caption,
+    color: colors.text.secondary,
+    marginLeft: spacing.sm,
+  },
+  stopsText: {
+    color: colors.flight.direct,
+  },
+  oneStopText: {
+    color: colors.flight.oneStop,
+  },
+  multiStopText: {
+    color: colors.flight.multiStop,
+  },
+  noResultsContainer: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    paddingHorizontal: spacing.xl,
+    backgroundColor: colors.background.secondary,
+  },
+  noResultsIcon: {
+    fontSize: 48,
+    color: colors.text.muted,
+    marginBottom: spacing.lg,
+    textAlign: 'center',
+    lineHeight: 54,
+  },
+  noResultsTitle: {
+    ...typography.h2,
+    color: colors.text.primary,
+    textAlign: 'center',
+    marginBottom: spacing.md,
+  },
+  noResultsMessage: {
+    ...typography.body,
+    color: colors.text.secondary,
+    textAlign: 'center',
+    lineHeight: 24,
+    marginBottom: spacing.xl,
+  },
+  backButton: {
+    backgroundColor: colors.primary,
+    borderRadius: radius.lg,
+    paddingHorizontal: spacing.xl,
+    paddingVertical: spacing.lg,
+    shadowColor: colors.primary,
+    shadowOffset: {
+      width: 0,
+      height: 4,
+    },
+    shadowOpacity: 0.3,
+    shadowRadius: 8,
+    elevation: 8,
+  },
+  backButtonText: {
+    ...typography.button,
+    color: colors.text.white,
+    fontSize: 16,
+  },
+});
